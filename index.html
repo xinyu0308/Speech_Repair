@@ -1,62 +1,133 @@
-<!doctype html>
-<html lang="zh-Hant">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <title>Speech Repair Demo — Xinyu Chen</title>
+  <meta charset="UTF-8">
+  <title>Speech Repair Demo</title>
   <style>
-    body{font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, "Noto Sans", Helvetica, Arial; margin:0; padding:2rem; background:#f7fafc; color:#1a202c}
-    .container{max-width:960px;margin:0 auto}
-    .header{text-align:center;margin-bottom:1.2rem}
-    .cards{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(240px,1fr))}
-    .card{background:#fff;border-radius:12px;padding:1rem;box-shadow:0 6px 18px rgba(2,6,23,0.06)}
-    .footer{margin-top:1.2rem;font-size:0.9rem;color:#4a5568}
-    audio{width:100%}
-    code{background:#edf2f7;padding:2px 6px;border-radius:6px}
+    body { font-family: Arial, sans-serif; margin: 40px; line-height: 1.6; }
+    h1, h2 { color: #2c3e50; }
+    .framework {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .framework img {
+      max-width: 80%;
+      height: auto;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .accordion {
+      background-color: #f4f4f4;
+      color: #333;
+      cursor: pointer;
+      padding: 14px;
+      width: 100%;
+      text-align: left;
+      border: none;
+      outline: none;
+      transition: background-color 0.3s;
+      font-size: 16px;
+      margin-top: 10px;
+      border-radius: 6px;
+    }
+    .accordion:hover {
+      background-color: #ddd;
+    }
+    .panel {
+      padding: 0 18px;
+      display: none;
+      background-color: white;
+      overflow: hidden;
+      border-left: 2px solid #ccc;
+      margin-bottom: 10px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 15px 0;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: center;
+    }
+    th { background-color: #f9f9f9; }
+    audio { width: 180px; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header class="header">
-      <h1>Speech Repair Demo</h1>
-      <p>Demo by 陳欣妤 — <a href="https://github.com/xinyu0308/Speech_Repair" target="_blank">github.com/xinyu0308/Speech_Repair</a></p>
-    </header>
+  <h1>Speech Repair Demo</h1>
+  <p>
+    We present speech repair results for dysarthric speakers.
+    Each sentence is provided in three versions:
+    <b>Original</b>, <b>Our Proposed</b>, and <b>Baseline</b>.
+  </p>
 
-    <section>
-      <p>把音檔放在 <code>audio/</code> 資料夾，或修改下面的 <code>src</code> 為你實際的檔名。</p>
-
-      <div class="cards">
-        <div class="card">
-          <h3>Original</h3>
-          <audio controls preload="none">
-            <source src="audio/original.wav" type="audio/wav">
-            Your browser does not support the audio element.
-          </audio>
-          <p style="margin-top:0.6rem;font-size:0.9rem;color:#4a5568">說明：放原始語音。</p>
-        </div>
-
-        <div class="card">
-          <h3>Our Proposed</h3>
-          <audio controls preload="none">
-            <source src="audio/proposed.wav" type="audio/wav">
-          </audio>
-          <p style="margin-top:0.6rem;font-size:0.9rem;color:#4a5568">說明：你模型修復後的語音。</p>
-        </div>
-
-        <div class="card">
-          <h3>TTS</h3>
-          <audio controls preload="none">
-            <source src="audio/tts.wav" type="audio/wav">
-          </audio>
-          <p style="margin-top:0.6rem;font-size:0.9rem;color:#4a5568">說明：TTS 或 baseline。</p>
-        </div>
-      </div>
-    </section>
-
-    <footer class="footer">
-      <p>要新增示例，複製一個 <code>&lt;div class="card"&gt;...&lt;/div&gt;</code> 並修改 <code>src</code>。</p>
-      <!-- 注意：把 demo 音檔放到 repo 的 audio/ 資料夾，然後 git add + commit + push -->
-    </footer>
+  <!-- Framework Figure -->
+  <div class="framework">
+    <h2>Framework</h2>
+    <img src="images/framework.png" alt="Speech Repair Framework">
   </div>
+
+  <!-- Speaker A -->
+  <button class="accordion">Speaker A (High severity)</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Sentence</th>
+        <th>Original</th>
+        <th>Our Proposed</th>
+        <th>Baseline</th>
+      </tr>
+      <tr>
+        <td>Sentence 1</td>
+        <td><audio controls src="audio/speakerA_sent1_original.wav"></audio></td>
+        <td><audio controls src="audio/speakerA_sent1_proposed.wav"></audio></td>
+        <td><audio controls src="audio/speakerA_sent1_baseline.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>Sentence 2</td>
+        <td><audio controls src="audio/speakerA_sent2_original.wav"></audio></td>
+        <td><audio controls src="audio/speakerA_sent2_proposed.wav"></audio></td>
+        <td><audio controls src="audio/speakerA_sent2_baseline.wav"></audio></td>
+      </tr>
+    </table>
+  </div>
+
+  <!-- Speaker B -->
+  <button class="accordion">Speaker B (Low severity)</button>
+  <div class="panel">
+    <table>
+      <tr>
+        <th>Sentence</th>
+        <th>Original</th>
+        <th>Our Proposed</th>
+        <th>Baseline</th>
+      </tr>
+      <tr>
+        <td>Sentence 1</td>
+        <td><audio controls src="audio/speakerB_sent1_original.wav"></audio></td>
+        <td><audio controls src="audio/speakerB_sent1_proposed.wav"></audio></td>
+        <td><audio controls src="audio/speakerB_sent1_baseline.wav"></audio></td>
+      </tr>
+      <tr>
+        <td>Sentence 2</td>
+        <td><audio controls src="audio/speakerB_sent2_original.wav"></audio></td>
+        <td><audio controls src="audio/speakerB_sent2_proposed.wav"></audio></td>
+        <td><audio controls src="audio/speakerB_sent2_baseline.wav"></audio></td>
+      </tr>
+    </table>
+  </div>
+
+  <script>
+    var acc = document.getElementsByClassName("accordion");
+    for (var i = 0; i < acc.length; i++) {
+      acc[i].addEventListener("click", function() {
+        this.classList.toggle("active");
+        var panel = this.nextElementSibling;
+        panel.style.display = panel.style.display === "block" ? "none" : "block";
+      });
+    }
+  </script>
 </body>
 </html>
