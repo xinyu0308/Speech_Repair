@@ -59,8 +59,8 @@
   <h1>Formant-Guided Speech Repair for Enhanced Comprehension of Mandarin Dysarthric Speech Demo</h1>
   <p>
     We present speech repair results for dysarthric speakers.
-    Each sentence is provided in three versions:
-    <b>Original</b>, <b>Our Proposed</b>, and <b>Baseline</b>.
+    Each sentence is provided in seven versions:
+    <b>Original</b>, <b>Pure TTS</b>, <b>ASR-TTS</b>, <b>+Speaker Adaption</b>, <b>+FCSW</b>, <b>Our Proposed</b>, and <b>DiffDSR-inspired Baseline</b>.
   </p>
 
   <!-- Framework Figure -->
@@ -68,51 +68,50 @@
     <h2>Framework</h2>
     <img src="image/framework.jpg" alt="Speech Repair Framework">
   </div>
-
-  <!-- Speaker 26 -->
-  <button class="accordion">Speaker 26</button>
+  <!-- Speaker 7 -->
+  <button class="accordion">Speaker 7 (High intelligibility - 7)</button>
   <div class="panel">
   <table>
-  <tr><th>Sentence</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
-  <tr><td>发行利率也有较大幅度上升</td><td><audio controls src="./demo/26_sample2_source.wav"></audio></td><td><audio controls src="./demo/26_sample2_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample2_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample2_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample2_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample2_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample2_diffdsr.wav"></audio></td></tr>
-  <tr><td>排位均均在二十位之内</td><td><audio controls src="./demo/26_sample3_source.wav"></audio></td><td><audio controls src="./demo/26_sample3_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample3_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample3_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample3_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample3_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample3_diffdsr.wav"></audio></td></tr>
-  <tr><td>城投债券的发行规模</td><td><audio controls src="./demo/26_sample8_source.wav"></audio></td><td><audio controls src="./demo/26_sample8_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample8_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample8_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample8_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample8_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample8_diffdsr.wav"></audio></td></tr>
-  <tr><td>这是今年上半年锂电池</td><td><audio controls src="./demo/26_sample12_source.wav"></audio></td><td><audio controls src="./demo/26_sample12_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample12_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample12_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample12_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample12_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample12_diffdsr.wav"></audio></td></tr>
-  </table>
-  </div>
-
-  <!-- Speaker 39 -->
-  <button class="accordion">Speaker 39</button>
-  <div class="panel">
-  <table>
-  <tr><th>Sentence</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
-  <tr><td>近期銷售模式的</td><td><audio controls src="./demo/39_sample2_source.wav"></audio></td><td><audio controls src="./demo/39_sample2_puretts.wav"></audio></td><td><audio controls src="./demo/39_sample2_asr-tts.wav"></audio></td><td><audio controls src="./demo/39_sample2_+spkft.wav"></audio></td><td><audio controls src="./demo/39_sample2_+fcsw.wav"></audio></td><td><audio controls src="./demo/39_sample2_our_proposed.wav"></audio></td><td><audio controls src="./demo/39_sample2_diffdsr.wav"></audio></td></tr>
-  <tr><td>未查出舊案</td><td><audio controls src="./demo/39_sample8_source.wav"></audio></td><td><audio controls src="./demo/39_sample8_puretts.wav"></audio></td><td><audio controls src="./demo/39_sample8_asr-tts.wav"></audio></td><td><audio controls src="./demo/39_sample8_+spkft.wav"></audio></td><td><audio controls src="./demo/39_sample8_+fcsw.wav"></audio></td><td><audio controls src="./demo/39_sample8_our_proposed.wav"></audio></td><td><audio controls src="./demo/39_sample8_diffdsr.wav"></audio></td></tr>
-  <tr><td>两地的生產總值</td><td><audio controls src="./demo/39_sample19_source.wav"></audio></td><td><audio controls src="./demo/39_sample19_puretts.wav"></audio></td><td><audio controls src="./demo/39_sample19_asr-tts.wav"></audio></td><td><audio controls src="./demo/39_sample19_+spkft.wav"></audio></td><td><audio controls src="./demo/39_sample19_+fcsw.wav"></audio></td><td><audio controls src="./demo/39_sample19_our_proposed.wav"></audio></td><td><audio controls src="./demo/39_sample19_diffdsr.wav"></audio></td></tr>
+  <tr><th>Transcription</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
+  <tr><td>成功處置深航</td><td><audio controls src="./demo/7_sample1_source.wav"></audio></td><td><audio controls src="./demo/7_sample1_puretts.wav"></audio></td><td><audio controls src="./demo/7_sample1_asr-tts.wav"></audio></td><td><audio controls src="./demo/7_sample1_+spkft.wav"></audio></td><td><audio controls src="./demo/7_sample1_+fcsw.wav"></audio></td><td><audio controls src="./demo/7_sample1_our_proposed.wav"></audio></td><td><audio controls src="./demo/7_sample1_diffdsr.wav"></audio></td></tr>
+  <tr><td>首屈一指的超大企業</td><td><audio controls src="./demo/7_sample2_source.wav"></audio></td><td><audio controls src="./demo/7_sample2_puretts.wav"></audio></td><td><audio controls src="./demo/7_sample2_asr-tts.wav"></audio></td><td><audio controls src="./demo/7_sample2_+spkft.wav"></audio></td><td><audio controls src="./demo/7_sample2_+fcsw.wav"></audio></td><td><audio controls src="./demo/7_sample2_our_proposed.wav"></audio></td><td><audio controls src="./demo/7_sample2_diffdsr.wav"></audio></td></tr>
+  <tr><td>身體素質指數偏低</td><td><audio controls src="./demo/7_sample3_source.wav"></audio></td><td><audio controls src="./demo/7_sample3_puretts.wav"></audio></td><td><audio controls src="./demo/7_sample3_asr-tts.wav"></audio></td><td><audio controls src="./demo/7_sample3_+spkft.wav"></audio></td><td><audio controls src="./demo/7_sample3_+fcsw.wav"></audio></td><td><audio controls src="./demo/7_sample3_our_proposed.wav"></audio></td><td><audio controls src="./demo/7_sample3_diffdsr.wav"></audio></td></tr>
   </table>
   </div>
 
   <!-- Speaker 4 -->
-  <button class="accordion">Speaker 4</button>
+  <button class="accordion">Speaker 4 (Mid intelligibility - 4)</button>
   <div class="panel">
   <table>
-  <tr><th>Sentence</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
-  <tr><td>附加補貼/td><td><audio controls src="./demo/4_sample1_source.wav"></audio></td><td><audio controls src="./demo/4_sample1_puretts.wav"></audio></td><td><audio controls src="./demo/4_sample1_asr-tts.wav"></audio></td><td><audio controls src="./demo/4_sample1_+spkft.wav"></audio></td><td><audio controls src="./demo/4_sample1_+fcsw.wav"></audio></td><td><audio controls src="./demo/4_sample1_our_proposed.wav"></audio></td><td><audio controls src="./demo/4_sample1_diffdsr.wav"></audio></td></tr>
-  <tr><td>宜减不宜加</td><td><audio controls src="./demo/4_sample4_source.wav"></audio></td><td><audio controls src="./demo/4_sample4_puretts.wav"></audio></td><td><audio controls src="./demo/4_sample4_asr-tts.wav"></audio></td><td><audio controls src="./demo/4_sample4_+spkft.wav"></audio></td><td><audio controls src="./demo/4_sample4_+fcsw.wav"></audio></td><td><audio controls src="./demo/4_sample4_our_proposed.wav"></audio></td><td><audio controls src="./demo/4_sample4_diffdsr.wav"></audio></td></tr>
-  <tr><td>進行合理分攤</td><td><audio controls src="./demo/4_sample5_source.wav"></audio></td><td><audio controls src="./demo/4_sample5_puretts.wav"></audio></td><td><audio controls src="./demo/4_sample5_asr-tts.wav"></audio></td><td><audio controls src="./demo/4_sample5_+spkft.wav"></audio></td><td><audio controls src="./demo/4_sample5_+fcsw.wav"></audio></td><td><audio controls src="./demo/4_sample5_our_proposed.wav"></audio></td><td><audio controls src="./demo/4_sample5_diffdsr.wav"></audio></td></tr>
+  <tr><th>Transcription</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
+  <tr><td>附加補貼</td><td><audio controls src="./demo/4_sample1_source.wav"></audio></td><td><audio controls src="./demo/4_sample1_puretts.wav"></audio></td><td><audio controls src="./demo/4_sample1_asr-tts.wav"></audio></td><td><audio controls src="./demo/4_sample1_+spkft.wav"></audio></td><td><audio controls src="./demo/4_sample1_+fcsw.wav"></audio></td><td><audio controls src="./demo/4_sample1_our_proposed.wav"></audio></td><td><audio controls src="./demo/4_sample1_diffdsr.wav"></audio></td></tr>
+  <tr><td>宜减不宜加</td><td><audio controls src="./demo/4_sample2_source.wav"></audio></td><td><audio controls src="./demo/4_sample2_puretts.wav"></audio></td><td><audio controls src="./demo/4_sample2_asr-tts.wav"></audio></td><td><audio controls src="./demo/4_sample2_+spkft.wav"></audio></td><td><audio controls src="./demo/4_sample2_+fcsw.wav"></audio></td><td><audio controls src="./demo/4_sample2_our_proposed.wav"></audio></td><td><audio controls src="./demo/4_sample2_diffdsr.wav"></audio></td></tr>
+  <tr><td>進行合理分攤</td><td><audio controls src="./demo/4_sample3_source.wav"></audio></td><td><audio controls src="./demo/4_sample3_puretts.wav"></audio></td><td><audio controls src="./demo/4_sample3_asr-tts.wav"></audio></td><td><audio controls src="./demo/4_sample3_+spkft.wav"></audio></td><td><audio controls src="./demo/4_sample3_+fcsw.wav"></audio></td><td><audio controls src="./demo/4_sample3_our_proposed.wav"></audio></td><td><audio controls src="./demo/4_sample3_diffdsr.wav"></audio></td></tr>
   </table>
   </div>
 
-  <!-- Speaker 7 -->
-  <button class="accordion">Speaker 7</button>
+  <!-- Speaker 26 -->
+  <button class="accordion">Speaker 26 (Low intelligibility - 26)</button>
   <div class="panel">
   <table>
-  <tr><th>Sentence</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
-  <tr><td>成功處置深航</td><td><audio controls src="./demo/7_sample3_source.wav"></audio></td><td><audio controls src="./demo/7_sample3_puretts.wav"></audio></td><td><audio controls src="./demo/7_sample3_asr-tts.wav"></audio></td><td><audio controls src="./demo/7_sample3_+spkft.wav"></audio></td><td><audio controls src="./demo/7_sample3_+fcsw.wav"></audio></td><td><audio controls src="./demo/7_sample3_our_proposed.wav"></audio></td><td><audio controls src="./demo/7_sample3_diffdsr.wav"></audio></td></tr>
-  <tr><td>首屈一指的超大企業</td><td><audio controls src="./demo/7_sample16_source.wav"></audio></td><td><audio controls src="./demo/7_sample16_puretts.wav"></audio></td><td><audio controls src="./demo/7_sample16_asr-tts.wav"></audio></td><td><audio controls src="./demo/7_sample16_+spkft.wav"></audio></td><td><audio controls src="./demo/7_sample16_+fcsw.wav"></audio></td><td><audio controls src="./demo/7_sample16_our_proposed.wav"></audio></td><td><audio controls src="./demo/7_sample16_diffdsr.wav"></audio></td></tr>
-  <tr><td>身体素質指數偏低</td><td><audio controls src="./demo/7_sample19_source.wav"></audio></td><td><audio controls src="./demo/7_sample19_puretts.wav"></audio></td><td><audio controls src="./demo/7_sample19_asr-tts.wav"></audio></td><td><audio controls src="./demo/7_sample19_+spkft.wav"></audio></td><td><audio controls src="./demo/7_sample19_+fcsw.wav"></audio></td><td><audio controls src="./demo/7_sample19_our_proposed.wav"></audio></td><td><audio controls src="./demo/7_sample19_diffdsr.wav"></audio></td></tr>
+  <tr><th>Transcription</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
+  <tr><td>發行利率也有較大幅度上升</td><td><audio controls src="./demo/26_sample1_source.wav"></audio></td><td><audio controls src="./demo/26_sample1_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample1_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample1_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample1_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample1_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample1_diffdsr.wav"></audio></td></tr>
+  <tr><td>排位均均在二十位之內</td><td><audio controls src="./demo/26_sample2_source.wav"></audio></td><td><audio controls src="./demo/26_sample2_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample2_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample2_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample2_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample2_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample2_diffdsr.wav"></audio></td></tr>
+  <tr><td>城投債卷的發行規模</td><td><audio controls src="./demo/26_sample3_source.wav"></audio></td><td><audio controls src="./demo/26_sample3_puretts.wav"></audio></td><td><audio controls src="./demo/26_sample3_asr-tts.wav"></audio></td><td><audio controls src="./demo/26_sample3_+spkft.wav"></audio></td><td><audio controls src="./demo/26_sample3_+fcsw.wav"></audio></td><td><audio controls src="./demo/26_sample3_our_proposed.wav"></audio></td><td><audio controls src="./demo/26_sample3_diffdsr.wav"></audio></td></tr>
   </table>
   </div>
+
+  <!-- Speaker 39 -->
+  <button class="accordion">Speaker 39 (Very Low intelligibility - 39)</button>
+  <div class="panel">
+  <table>
+  <tr><th>Transcription</th><th>Original</th><th>Pure TTS</th><th>ASR-TTS</th><th>+Speaker Adaption</th><th>+FCSW</th><th>Our Proposed</th><th>DiffDSR-inspired Baseline</th></tr>
+  <tr><td>近期銷售模式的</td><td><audio controls src="./demo/39_sample1_source.wav"></audio></td><td><audio controls src="./demo/39_sample1_puretts.wav"></audio></td><td><audio controls src="./demo/39_sample1_asr-tts.wav"></audio></td><td><audio controls src="./demo/39_sample1_+spkft.wav"></audio></td><td><audio controls src="./demo/39_sample1_+fcsw.wav"></audio></td><td><audio controls src="./demo/39_sample1_our_proposed.wav"></audio></td><td><audio controls src="./demo/39_sample1_diffdsr.wav"></audio></td></tr>
+  <tr><td>未查出舊案</td><td><audio controls src="./demo/39_sample2_source.wav"></audio></td><td><audio controls src="./demo/39_sample2_puretts.wav"></audio></td><td><audio controls src="./demo/39_sample2_asr-tts.wav"></audio></td><td><audio controls src="./demo/39_sample2_+spkft.wav"></audio></td><td><audio controls src="./demo/39_sample2_+fcsw.wav"></audio></td><td><audio controls src="./demo/39_sample2_our_proposed.wav"></audio></td><td><audio controls src="./demo/39_sample2_diffdsr.wav"></audio></td></tr>
+  <tr><td>两地的生產總值</td><td><audio controls src="./demo/39_sample3_source.wav"></audio></td><td><audio controls src="./demo/39_sample3_puretts.wav"></audio></td><td><audio controls src="./demo/39_sample3_asr-tts.wav"></audio></td><td><audio controls src="./demo/39_sample3_+spkft.wav"></audio></td><td><audio controls src="./demo/39_sample3_+fcsw.wav"></audio></td><td><audio controls src="./demo/39_sample3_our_proposed.wav"></audio></td><td><audio controls src="./demo/39_sample3_diffdsr.wav"></audio></td></tr>
+  </table>
+  </div>
+
   <script>
     var acc = document.getElementsByClassName("accordion");
     for (var i = 0; i < acc.length; i++) {
